@@ -1,0 +1,1021 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"3 ./keypad.h
+[; ;./keypad.h: 3:  unsigned int kpRead(void);
+[v _kpRead `(ui ~T0 @X0 0 ef ]
+"632 ./pic18f4520.h
+[; ;./pic18f4520.h: 632: extern volatile unsigned char PORTD __attribute__((address(0xF83)));
+[v _PORTD `Vuc ~T0 @X0 0 e@3971 ]
+"4 ./keypad.h
+[; ;./keypad.h: 4:     char kpReadKey(void);
+[v _kpReadKey `(uc ~T0 @X0 0 ef ]
+[p mainexit ]
+"2143 ./pic18f4520.h
+[; ;./pic18f4520.h: 2143: extern volatile unsigned char TRISD __attribute__((address(0xF95)));
+[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
+"4 ./so.h
+[; ;./so.h: 4:  void soInit (void);
+[v _soInit `(v ~T0 @X0 0 ef ]
+"6 ./keypad.h
+[; ;./keypad.h: 6:  void kpInit(void);
+[v _kpInit `(v ~T0 @X0 0 ef ]
+"8 ./lcd.h
+[; ;./lcd.h: 8:   void lcdInit(void);
+[v _lcdInit `(v ~T0 @X0 0 ef ]
+"24 ./ssd.h
+[; ;./ssd.h: 24:  void ssdInit(void);
+[v _ssdInit `(v ~T0 @X0 0 ef ]
+"27 ./timer.h
+[; ;./timer.h: 27:  void timerInit(void);
+[v _timerInit `(v ~T0 @X0 0 ef ]
+"3 ./lcd.h
+[; ;./lcd.h: 3:   void lcdCommand(char value);
+[v _lcdCommand `(v ~T0 @X0 0 ef1`uc ]
+"5 ./keypad.h
+[; ;./keypad.h: 5:  void kpDebounce(void);
+[v _kpDebounce `(v ~T0 @X0 0 ef ]
+"5 ./lcd.h
+[; ;./lcd.h: 5:   void lcdString(char msg[]);
+[v _lcdString `(v ~T0 @X0 0 ef1`*uc ]
+"6
+[; ;./lcd.h: 6:   void lcdNumber(int value);
+[v _lcdNumber `(v ~T0 @X0 0 ef1`i ]
+"22 ./ssd.h
+[; ;./ssd.h: 22:  void ssdDigit(char val, char pos);
+[v _ssdDigit `(v ~T0 @X0 0 ef2`uc`uc ]
+"23
+[; ;./ssd.h: 23:  void ssdUpdate(void);
+[v _ssdUpdate `(v ~T0 @X0 0 ef ]
+"4 ./atraso.h
+[; ;./atraso.h: 4: void atraso_ms(unsigned int num);
+[v _atraso_ms `(v ~T0 @X0 0 ef1`ui ]
+"54 ./pic18f4520.h
+[; ;./pic18f4520.h: 54: __asm("PORTA equ 0F80h");
+[; <" PORTA equ 0F80h ;# ">
+"273
+[; ;./pic18f4520.h: 273: __asm("PORTB equ 0F81h");
+[; <" PORTB equ 0F81h ;# ">
+"452
+[; ;./pic18f4520.h: 452: __asm("PORTC equ 0F82h");
+[; <" PORTC equ 0F82h ;# ">
+"634
+[; ;./pic18f4520.h: 634: __asm("PORTD equ 0F83h");
+[; <" PORTD equ 0F83h ;# ">
+"776
+[; ;./pic18f4520.h: 776: __asm("PORTE equ 0F84h");
+[; <" PORTE equ 0F84h ;# ">
+"979
+[; ;./pic18f4520.h: 979: __asm("LATA equ 0F89h");
+[; <" LATA equ 0F89h ;# ">
+"1091
+[; ;./pic18f4520.h: 1091: __asm("LATB equ 0F8Ah");
+[; <" LATB equ 0F8Ah ;# ">
+"1203
+[; ;./pic18f4520.h: 1203: __asm("LATC equ 0F8Bh");
+[; <" LATC equ 0F8Bh ;# ">
+"1315
+[; ;./pic18f4520.h: 1315: __asm("LATD equ 0F8Ch");
+[; <" LATD equ 0F8Ch ;# ">
+"1427
+[; ;./pic18f4520.h: 1427: __asm("LATE equ 0F8Dh");
+[; <" LATE equ 0F8Dh ;# ">
+"1479
+[; ;./pic18f4520.h: 1479: __asm("TRISA equ 0F92h");
+[; <" TRISA equ 0F92h ;# ">
+"1484
+[; ;./pic18f4520.h: 1484: __asm("DDRA equ 0F92h");
+[; <" DDRA equ 0F92h ;# ">
+"1701
+[; ;./pic18f4520.h: 1701: __asm("TRISB equ 0F93h");
+[; <" TRISB equ 0F93h ;# ">
+"1706
+[; ;./pic18f4520.h: 1706: __asm("DDRB equ 0F93h");
+[; <" DDRB equ 0F93h ;# ">
+"1923
+[; ;./pic18f4520.h: 1923: __asm("TRISC equ 0F94h");
+[; <" TRISC equ 0F94h ;# ">
+"1928
+[; ;./pic18f4520.h: 1928: __asm("DDRC equ 0F94h");
+[; <" DDRC equ 0F94h ;# ">
+"2145
+[; ;./pic18f4520.h: 2145: __asm("TRISD equ 0F95h");
+[; <" TRISD equ 0F95h ;# ">
+"2150
+[; ;./pic18f4520.h: 2150: __asm("DDRD equ 0F95h");
+[; <" DDRD equ 0F95h ;# ">
+"2367
+[; ;./pic18f4520.h: 2367: __asm("TRISE equ 0F96h");
+[; <" TRISE equ 0F96h ;# ">
+"2372
+[; ;./pic18f4520.h: 2372: __asm("DDRE equ 0F96h");
+[; <" DDRE equ 0F96h ;# ">
+"2531
+[; ;./pic18f4520.h: 2531: __asm("OSCTUNE equ 0F9Bh");
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"2596
+[; ;./pic18f4520.h: 2596: __asm("PIE1 equ 0F9Dh");
+[; <" PIE1 equ 0F9Dh ;# ">
+"2673
+[; ;./pic18f4520.h: 2673: __asm("PIR1 equ 0F9Eh");
+[; <" PIR1 equ 0F9Eh ;# ">
+"2750
+[; ;./pic18f4520.h: 2750: __asm("IPR1 equ 0F9Fh");
+[; <" IPR1 equ 0F9Fh ;# ">
+"2827
+[; ;./pic18f4520.h: 2827: __asm("PIE2 equ 0FA0h");
+[; <" PIE2 equ 0FA0h ;# ">
+"2893
+[; ;./pic18f4520.h: 2893: __asm("PIR2 equ 0FA1h");
+[; <" PIR2 equ 0FA1h ;# ">
+"2959
+[; ;./pic18f4520.h: 2959: __asm("IPR2 equ 0FA2h");
+[; <" IPR2 equ 0FA2h ;# ">
+"3025
+[; ;./pic18f4520.h: 3025: __asm("EECON1 equ 0FA6h");
+[; <" EECON1 equ 0FA6h ;# ">
+"3091
+[; ;./pic18f4520.h: 3091: __asm("EECON2 equ 0FA7h");
+[; <" EECON2 equ 0FA7h ;# ">
+"3098
+[; ;./pic18f4520.h: 3098: __asm("EEDATA equ 0FA8h");
+[; <" EEDATA equ 0FA8h ;# ">
+"3105
+[; ;./pic18f4520.h: 3105: __asm("EEADR equ 0FA9h");
+[; <" EEADR equ 0FA9h ;# ">
+"3112
+[; ;./pic18f4520.h: 3112: __asm("RCSTA equ 0FABh");
+[; <" RCSTA equ 0FABh ;# ">
+"3117
+[; ;./pic18f4520.h: 3117: __asm("RCSTA1 equ 0FABh");
+[; <" RCSTA1 equ 0FABh ;# ">
+"3322
+[; ;./pic18f4520.h: 3322: __asm("TXSTA equ 0FACh");
+[; <" TXSTA equ 0FACh ;# ">
+"3327
+[; ;./pic18f4520.h: 3327: __asm("TXSTA1 equ 0FACh");
+[; <" TXSTA1 equ 0FACh ;# ">
+"3578
+[; ;./pic18f4520.h: 3578: __asm("TXREG equ 0FADh");
+[; <" TXREG equ 0FADh ;# ">
+"3583
+[; ;./pic18f4520.h: 3583: __asm("TXREG1 equ 0FADh");
+[; <" TXREG1 equ 0FADh ;# ">
+"3590
+[; ;./pic18f4520.h: 3590: __asm("RCREG equ 0FAEh");
+[; <" RCREG equ 0FAEh ;# ">
+"3595
+[; ;./pic18f4520.h: 3595: __asm("RCREG1 equ 0FAEh");
+[; <" RCREG1 equ 0FAEh ;# ">
+"3602
+[; ;./pic18f4520.h: 3602: __asm("SPBRG equ 0FAFh");
+[; <" SPBRG equ 0FAFh ;# ">
+"3607
+[; ;./pic18f4520.h: 3607: __asm("SPBRG1 equ 0FAFh");
+[; <" SPBRG1 equ 0FAFh ;# ">
+"3614
+[; ;./pic18f4520.h: 3614: __asm("SPBRGH equ 0FB0h");
+[; <" SPBRGH equ 0FB0h ;# ">
+"3621
+[; ;./pic18f4520.h: 3621: __asm("T3CON equ 0FB1h");
+[; <" T3CON equ 0FB1h ;# ">
+"3733
+[; ;./pic18f4520.h: 3733: __asm("TMR3 equ 0FB2h");
+[; <" TMR3 equ 0FB2h ;# ">
+"3740
+[; ;./pic18f4520.h: 3740: __asm("TMR3L equ 0FB2h");
+[; <" TMR3L equ 0FB2h ;# ">
+"3747
+[; ;./pic18f4520.h: 3747: __asm("TMR3H equ 0FB3h");
+[; <" TMR3H equ 0FB3h ;# ">
+"3754
+[; ;./pic18f4520.h: 3754: __asm("CMCON equ 0FB4h");
+[; <" CMCON equ 0FB4h ;# ">
+"3844
+[; ;./pic18f4520.h: 3844: __asm("CVRCON equ 0FB5h");
+[; <" CVRCON equ 0FB5h ;# ">
+"3923
+[; ;./pic18f4520.h: 3923: __asm("ECCP1AS equ 0FB6h");
+[; <" ECCP1AS equ 0FB6h ;# ">
+"3928
+[; ;./pic18f4520.h: 3928: __asm("ECCPAS equ 0FB6h");
+[; <" ECCPAS equ 0FB6h ;# ">
+"4085
+[; ;./pic18f4520.h: 4085: __asm("PWM1CON equ 0FB7h");
+[; <" PWM1CON equ 0FB7h ;# ">
+"4090
+[; ;./pic18f4520.h: 4090: __asm("ECCP1DEL equ 0FB7h");
+[; <" ECCP1DEL equ 0FB7h ;# ">
+"4223
+[; ;./pic18f4520.h: 4223: __asm("BAUDCON equ 0FB8h");
+[; <" BAUDCON equ 0FB8h ;# ">
+"4228
+[; ;./pic18f4520.h: 4228: __asm("BAUDCTL equ 0FB8h");
+[; <" BAUDCTL equ 0FB8h ;# ">
+"4403
+[; ;./pic18f4520.h: 4403: __asm("CCP2CON equ 0FBAh");
+[; <" CCP2CON equ 0FBAh ;# ">
+"4482
+[; ;./pic18f4520.h: 4482: __asm("CCPR2 equ 0FBBh");
+[; <" CCPR2 equ 0FBBh ;# ">
+"4489
+[; ;./pic18f4520.h: 4489: __asm("CCPR2L equ 0FBBh");
+[; <" CCPR2L equ 0FBBh ;# ">
+"4496
+[; ;./pic18f4520.h: 4496: __asm("CCPR2H equ 0FBCh");
+[; <" CCPR2H equ 0FBCh ;# ">
+"4503
+[; ;./pic18f4520.h: 4503: __asm("CCP1CON equ 0FBDh");
+[; <" CCP1CON equ 0FBDh ;# ">
+"4600
+[; ;./pic18f4520.h: 4600: __asm("CCPR1 equ 0FBEh");
+[; <" CCPR1 equ 0FBEh ;# ">
+"4607
+[; ;./pic18f4520.h: 4607: __asm("CCPR1L equ 0FBEh");
+[; <" CCPR1L equ 0FBEh ;# ">
+"4614
+[; ;./pic18f4520.h: 4614: __asm("CCPR1H equ 0FBFh");
+[; <" CCPR1H equ 0FBFh ;# ">
+"4621
+[; ;./pic18f4520.h: 4621: __asm("ADCON2 equ 0FC0h");
+[; <" ADCON2 equ 0FC0h ;# ">
+"4692
+[; ;./pic18f4520.h: 4692: __asm("ADCON1 equ 0FC1h");
+[; <" ADCON1 equ 0FC1h ;# ">
+"4777
+[; ;./pic18f4520.h: 4777: __asm("ADCON0 equ 0FC2h");
+[; <" ADCON0 equ 0FC2h ;# ">
+"4896
+[; ;./pic18f4520.h: 4896: __asm("ADRES equ 0FC3h");
+[; <" ADRES equ 0FC3h ;# ">
+"4903
+[; ;./pic18f4520.h: 4903: __asm("ADRESL equ 0FC3h");
+[; <" ADRESL equ 0FC3h ;# ">
+"4910
+[; ;./pic18f4520.h: 4910: __asm("ADRESH equ 0FC4h");
+[; <" ADRESH equ 0FC4h ;# ">
+"4917
+[; ;./pic18f4520.h: 4917: __asm("SSPCON2 equ 0FC5h");
+[; <" SSPCON2 equ 0FC5h ;# ">
+"5012
+[; ;./pic18f4520.h: 5012: __asm("SSPCON1 equ 0FC6h");
+[; <" SSPCON1 equ 0FC6h ;# ">
+"5082
+[; ;./pic18f4520.h: 5082: __asm("SSPSTAT equ 0FC7h");
+[; <" SSPSTAT equ 0FC7h ;# ">
+"5303
+[; ;./pic18f4520.h: 5303: __asm("SSPADD equ 0FC8h");
+[; <" SSPADD equ 0FC8h ;# ">
+"5310
+[; ;./pic18f4520.h: 5310: __asm("SSPBUF equ 0FC9h");
+[; <" SSPBUF equ 0FC9h ;# ">
+"5317
+[; ;./pic18f4520.h: 5317: __asm("T2CON equ 0FCAh");
+[; <" T2CON equ 0FCAh ;# ">
+"5415
+[; ;./pic18f4520.h: 5415: __asm("PR2 equ 0FCBh");
+[; <" PR2 equ 0FCBh ;# ">
+"5420
+[; ;./pic18f4520.h: 5420: __asm("MEMCON equ 0FCBh");
+[; <" MEMCON equ 0FCBh ;# ">
+"5525
+[; ;./pic18f4520.h: 5525: __asm("TMR2 equ 0FCCh");
+[; <" TMR2 equ 0FCCh ;# ">
+"5532
+[; ;./pic18f4520.h: 5532: __asm("T1CON equ 0FCDh");
+[; <" T1CON equ 0FCDh ;# ">
+"5635
+[; ;./pic18f4520.h: 5635: __asm("TMR1 equ 0FCEh");
+[; <" TMR1 equ 0FCEh ;# ">
+"5642
+[; ;./pic18f4520.h: 5642: __asm("TMR1L equ 0FCEh");
+[; <" TMR1L equ 0FCEh ;# ">
+"5649
+[; ;./pic18f4520.h: 5649: __asm("TMR1H equ 0FCFh");
+[; <" TMR1H equ 0FCFh ;# ">
+"5656
+[; ;./pic18f4520.h: 5656: __asm("RCON equ 0FD0h");
+[; <" RCON equ 0FD0h ;# ">
+"5789
+[; ;./pic18f4520.h: 5789: __asm("WDTCON equ 0FD1h");
+[; <" WDTCON equ 0FD1h ;# ">
+"5817
+[; ;./pic18f4520.h: 5817: __asm("HLVDCON equ 0FD2h");
+[; <" HLVDCON equ 0FD2h ;# ">
+"5822
+[; ;./pic18f4520.h: 5822: __asm("LVDCON equ 0FD2h");
+[; <" LVDCON equ 0FD2h ;# ">
+"6087
+[; ;./pic18f4520.h: 6087: __asm("OSCCON equ 0FD3h");
+[; <" OSCCON equ 0FD3h ;# ">
+"6170
+[; ;./pic18f4520.h: 6170: __asm("T0CON equ 0FD5h");
+[; <" T0CON equ 0FD5h ;# ">
+"6253
+[; ;./pic18f4520.h: 6253: __asm("TMR0 equ 0FD6h");
+[; <" TMR0 equ 0FD6h ;# ">
+"6260
+[; ;./pic18f4520.h: 6260: __asm("TMR0L equ 0FD6h");
+[; <" TMR0L equ 0FD6h ;# ">
+"6267
+[; ;./pic18f4520.h: 6267: __asm("TMR0H equ 0FD7h");
+[; <" TMR0H equ 0FD7h ;# ">
+"6274
+[; ;./pic18f4520.h: 6274: __asm("STATUS equ 0FD8h");
+[; <" STATUS equ 0FD8h ;# ">
+"6345
+[; ;./pic18f4520.h: 6345: __asm("FSR2 equ 0FD9h");
+[; <" FSR2 equ 0FD9h ;# ">
+"6352
+[; ;./pic18f4520.h: 6352: __asm("FSR2L equ 0FD9h");
+[; <" FSR2L equ 0FD9h ;# ">
+"6359
+[; ;./pic18f4520.h: 6359: __asm("FSR2H equ 0FDAh");
+[; <" FSR2H equ 0FDAh ;# ">
+"6366
+[; ;./pic18f4520.h: 6366: __asm("PLUSW2 equ 0FDBh");
+[; <" PLUSW2 equ 0FDBh ;# ">
+"6373
+[; ;./pic18f4520.h: 6373: __asm("PREINC2 equ 0FDCh");
+[; <" PREINC2 equ 0FDCh ;# ">
+"6380
+[; ;./pic18f4520.h: 6380: __asm("POSTDEC2 equ 0FDDh");
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"6387
+[; ;./pic18f4520.h: 6387: __asm("POSTINC2 equ 0FDEh");
+[; <" POSTINC2 equ 0FDEh ;# ">
+"6394
+[; ;./pic18f4520.h: 6394: __asm("INDF2 equ 0FDFh");
+[; <" INDF2 equ 0FDFh ;# ">
+"6401
+[; ;./pic18f4520.h: 6401: __asm("BSR equ 0FE0h");
+[; <" BSR equ 0FE0h ;# ">
+"6408
+[; ;./pic18f4520.h: 6408: __asm("FSR1 equ 0FE1h");
+[; <" FSR1 equ 0FE1h ;# ">
+"6415
+[; ;./pic18f4520.h: 6415: __asm("FSR1L equ 0FE1h");
+[; <" FSR1L equ 0FE1h ;# ">
+"6422
+[; ;./pic18f4520.h: 6422: __asm("FSR1H equ 0FE2h");
+[; <" FSR1H equ 0FE2h ;# ">
+"6429
+[; ;./pic18f4520.h: 6429: __asm("PLUSW1 equ 0FE3h");
+[; <" PLUSW1 equ 0FE3h ;# ">
+"6436
+[; ;./pic18f4520.h: 6436: __asm("PREINC1 equ 0FE4h");
+[; <" PREINC1 equ 0FE4h ;# ">
+"6443
+[; ;./pic18f4520.h: 6443: __asm("POSTDEC1 equ 0FE5h");
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"6450
+[; ;./pic18f4520.h: 6450: __asm("POSTINC1 equ 0FE6h");
+[; <" POSTINC1 equ 0FE6h ;# ">
+"6457
+[; ;./pic18f4520.h: 6457: __asm("INDF1 equ 0FE7h");
+[; <" INDF1 equ 0FE7h ;# ">
+"6464
+[; ;./pic18f4520.h: 6464: __asm("WREG equ 0FE8h");
+[; <" WREG equ 0FE8h ;# ">
+"6476
+[; ;./pic18f4520.h: 6476: __asm("FSR0 equ 0FE9h");
+[; <" FSR0 equ 0FE9h ;# ">
+"6483
+[; ;./pic18f4520.h: 6483: __asm("FSR0L equ 0FE9h");
+[; <" FSR0L equ 0FE9h ;# ">
+"6490
+[; ;./pic18f4520.h: 6490: __asm("FSR0H equ 0FEAh");
+[; <" FSR0H equ 0FEAh ;# ">
+"6497
+[; ;./pic18f4520.h: 6497: __asm("PLUSW0 equ 0FEBh");
+[; <" PLUSW0 equ 0FEBh ;# ">
+"6504
+[; ;./pic18f4520.h: 6504: __asm("PREINC0 equ 0FECh");
+[; <" PREINC0 equ 0FECh ;# ">
+"6511
+[; ;./pic18f4520.h: 6511: __asm("POSTDEC0 equ 0FEDh");
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"6518
+[; ;./pic18f4520.h: 6518: __asm("POSTINC0 equ 0FEEh");
+[; <" POSTINC0 equ 0FEEh ;# ">
+"6525
+[; ;./pic18f4520.h: 6525: __asm("INDF0 equ 0FEFh");
+[; <" INDF0 equ 0FEFh ;# ">
+"6532
+[; ;./pic18f4520.h: 6532: __asm("INTCON3 equ 0FF0h");
+[; <" INTCON3 equ 0FF0h ;# ">
+"6624
+[; ;./pic18f4520.h: 6624: __asm("INTCON2 equ 0FF1h");
+[; <" INTCON2 equ 0FF1h ;# ">
+"6694
+[; ;./pic18f4520.h: 6694: __asm("INTCON equ 0FF2h");
+[; <" INTCON equ 0FF2h ;# ">
+"6811
+[; ;./pic18f4520.h: 6811: __asm("PROD equ 0FF3h");
+[; <" PROD equ 0FF3h ;# ">
+"6818
+[; ;./pic18f4520.h: 6818: __asm("PRODL equ 0FF3h");
+[; <" PRODL equ 0FF3h ;# ">
+"6825
+[; ;./pic18f4520.h: 6825: __asm("PRODH equ 0FF4h");
+[; <" PRODH equ 0FF4h ;# ">
+"6832
+[; ;./pic18f4520.h: 6832: __asm("TABLAT equ 0FF5h");
+[; <" TABLAT equ 0FF5h ;# ">
+"6841
+[; ;./pic18f4520.h: 6841: __asm("TBLPTR equ 0FF6h");
+[; <" TBLPTR equ 0FF6h ;# ">
+"6848
+[; ;./pic18f4520.h: 6848: __asm("TBLPTRL equ 0FF6h");
+[; <" TBLPTRL equ 0FF6h ;# ">
+"6855
+[; ;./pic18f4520.h: 6855: __asm("TBLPTRH equ 0FF7h");
+[; <" TBLPTRH equ 0FF7h ;# ">
+"6862
+[; ;./pic18f4520.h: 6862: __asm("TBLPTRU equ 0FF8h");
+[; <" TBLPTRU equ 0FF8h ;# ">
+"6871
+[; ;./pic18f4520.h: 6871: __asm("PCLAT equ 0FF9h");
+[; <" PCLAT equ 0FF9h ;# ">
+"6878
+[; ;./pic18f4520.h: 6878: __asm("PC equ 0FF9h");
+[; <" PC equ 0FF9h ;# ">
+"6885
+[; ;./pic18f4520.h: 6885: __asm("PCL equ 0FF9h");
+[; <" PCL equ 0FF9h ;# ">
+"6892
+[; ;./pic18f4520.h: 6892: __asm("PCLATH equ 0FFAh");
+[; <" PCLATH equ 0FFAh ;# ">
+"6899
+[; ;./pic18f4520.h: 6899: __asm("PCLATU equ 0FFBh");
+[; <" PCLATU equ 0FFBh ;# ">
+"6906
+[; ;./pic18f4520.h: 6906: __asm("STKPTR equ 0FFCh");
+[; <" STKPTR equ 0FFCh ;# ">
+"6980
+[; ;./pic18f4520.h: 6980: __asm("TOS equ 0FFDh");
+[; <" TOS equ 0FFDh ;# ">
+"6987
+[; ;./pic18f4520.h: 6987: __asm("TOSL equ 0FFDh");
+[; <" TOSL equ 0FFDh ;# ">
+"6994
+[; ;./pic18f4520.h: 6994: __asm("TOSH equ 0FFEh");
+[; <" TOSH equ 0FFEh ;# ">
+"7001
+[; ;./pic18f4520.h: 7001: __asm("TOSU equ 0FFFh");
+[; <" TOSU equ 0FFFh ;# ">
+"26 ./config.h
+[p x OSC=HS                   ]
+"27
+[p x FCMEN  =  OFF ]
+"28
+[p x IESO  =  OFF ]
+"29
+[p x PWRT  =  OFF ]
+"30
+[p x BOREN  =  OFF ]
+"31
+[p x BORV  =  46 ]
+"32
+[p x WDT=OFF                  ]
+"33
+[p x WDTPS  =  1                ]
+"34
+[p x MCLRE=ON                 ]
+"35
+[p x LPT1OSC  =  OFF ]
+"36
+[p x PBADEN  =  ON ]
+"37
+[p x CCP2MX  =  PORTC ]
+"38
+[p x STVREN  =  OFF ]
+"39
+[p x LVP=OFF                  ]
+"40
+[p x XINST  =  OFF ]
+"41
+[p x DEBUG  =  OFF              ]
+"43
+[p x CP0  =  OFF ]
+"44
+[p x CP1  =  OFF ]
+"45
+[p x CP2  =  OFF ]
+"46
+[p x CP3  =  OFF ]
+"47
+[p x CPB  =  OFF ]
+"48
+[p x CPD  =  OFF ]
+"50
+[p x WRT0  =  OFF ]
+"51
+[p x WRT1  =  OFF ]
+"52
+[p x WRT2  =  OFF ]
+"53
+[p x WRT3  =  OFF ]
+"54
+[p x WRTB  =  OFF ]
+"55
+[p x WRTC  =  OFF ]
+"56
+[p x WRTD  =  OFF ]
+"58
+[p x EBTR0  =  OFF ]
+"59
+[p x EBTR1  =  OFF ]
+"60
+[p x EBTR2  =  OFF ]
+"61
+[p x EBTR3  =  OFF ]
+"62
+[p x EBTRB  =  OFF ]
+"19 main.c
+[; ;main.c: 19: static char v0;
+[v _v0 `uc ~T0 @X0 1 s ]
+"21
+[; ;main.c: 21: unsigned int leitura = 0, tempo = 0, alt =0, vel = 0;
+[v _leitura `ui ~T0 @X0 1 e ]
+[i _leitura
+-> -> 0 `i `ui
+]
+[v _tempo `ui ~T0 @X0 1 e ]
+[i _tempo
+-> -> 0 `i `ui
+]
+[v _alt `ui ~T0 @X0 1 e ]
+[i _alt
+-> -> 0 `i `ui
+]
+[v _vel `ui ~T0 @X0 1 e ]
+[i _vel
+-> -> 0 `i `ui
+]
+"22
+[; ;main.c: 22: unsigned char estado = 0, falha = 0;
+[v _estado `uc ~T0 @X0 1 e ]
+[i _estado
+-> -> 0 `i `uc
+]
+[v _falha `uc ~T0 @X0 1 e ]
+[i _falha
+-> -> 0 `i `uc
+]
+"24
+[; ;main.c: 24: void LeTeclado(void){
+[v _LeTeclado `(v ~T0 @X0 1 ef ]
+{
+[e :U _LeTeclado ]
+[f ]
+"25
+[; ;main.c: 25:     if(kpRead() != leitura){
+[e $ ! != ( _kpRead ..  _leitura 277  ]
+{
+"26
+[; ;main.c: 26:         leitura = kpRead();
+[e = _leitura ( _kpRead ..  ]
+"28
+[; ;main.c: 28:         switch(kpReadKey()){
+[e $U 279  ]
+{
+"29
+[; ;main.c: 29:             case 'U':
+[e :U 280 ]
+"30
+[; ;main.c: 30:                 if(estado == 0){
+[e $ ! == -> _estado `i -> 0 `i 281  ]
+{
+"31
+[; ;main.c: 31:                     vel = 100;
+[e = _vel -> -> 100 `i `ui ]
+"32
+[; ;main.c: 32:                     estado = 1;
+[e = _estado -> -> 1 `i `uc ]
+"33
+[; ;main.c: 33:                     PORTD = 0xFF;
+[e = _PORTD -> -> 255 `i `uc ]
+"34
+[; ;main.c: 34:                 }else if((estado != 3)&&(falha == 0)){
+}
+[e $U 282  ]
+[e :U 281 ]
+[e $ ! && != -> _estado `i -> 3 `i == -> _falha `i -> 0 `i 283  ]
+{
+"35
+[; ;main.c: 35:                     estado = 3;
+[e = _estado -> -> 3 `i `uc ]
+"36
+[; ;main.c: 36:                     PORTD = 0xFF;
+[e = _PORTD -> -> 255 `i `uc ]
+"37
+[; ;main.c: 37:                 }
+}
+[e :U 283 ]
+[e :U 282 ]
+"38
+[; ;main.c: 38:                 if(vel>0)alt = alt + vel;
+[e $ ! > _vel -> -> 0 `i `ui 284  ]
+[e = _alt + _alt _vel ]
+[e :U 284 ]
+"39
+[; ;main.c: 39:                 tempo = tempo + 1;
+[e = _tempo + _tempo -> -> 1 `i `ui ]
+"40
+[; ;main.c: 40:                 break;
+[e $U 278  ]
+"41
+[; ;main.c: 41:             case 'L':
+[e :U 285 ]
+"42
+[; ;main.c: 42:                 if((alt<1500)&&(vel<401)){
+[e $ ! && < _alt -> -> 1500 `i `ui < _vel -> -> 401 `i `ui 286  ]
+{
+"43
+[; ;main.c: 43:                     vel = vel + 50;
+[e = _vel + _vel -> -> 50 `i `ui ]
+"44
+[; ;main.c: 44:                 }
+}
+[e :U 286 ]
+"45
+[; ;main.c: 45:                 if(vel>0)alt = alt + vel;
+[e $ ! > _vel -> -> 0 `i `ui 287  ]
+[e = _alt + _alt _vel ]
+[e :U 287 ]
+"46
+[; ;main.c: 46:                 tempo = tempo + 1;
+[e = _tempo + _tempo -> -> 1 `i `ui ]
+"47
+[; ;main.c: 47:                 break;
+[e $U 278  ]
+"48
+[; ;main.c: 48:             case 'D':
+[e :U 288 ]
+"49
+[; ;main.c: 49:                 if(vel>49){
+[e $ ! > _vel -> -> 49 `i `ui 289  ]
+{
+"50
+[; ;main.c: 50:                     vel = vel - 50;
+[e = _vel - _vel -> -> 50 `i `ui ]
+"51
+[; ;main.c: 51:                 }else{
+}
+[e $U 290  ]
+[e :U 289 ]
+{
+"52
+[; ;main.c: 52:                     vel = 0;
+[e = _vel -> -> 0 `i `ui ]
+"53
+[; ;main.c: 53:                 }
+}
+[e :U 290 ]
+"54
+[; ;main.c: 54:                 if(vel>0)alt = alt + vel;
+[e $ ! > _vel -> -> 0 `i `ui 291  ]
+[e = _alt + _alt _vel ]
+[e :U 291 ]
+"55
+[; ;main.c: 55:                 tempo = tempo + 1;
+[e = _tempo + _tempo -> -> 1 `i `ui ]
+"56
+[; ;main.c: 56:                 break;
+[e $U 278  ]
+"57
+[; ;main.c: 57:             case 'R':
+[e :U 292 ]
+"58
+[; ;main.c: 58:                 if(vel>2){
+[e $ ! > _vel -> -> 2 `i `ui 293  ]
+{
+"59
+[; ;main.c: 59:                     vel = vel - 3;
+[e = _vel - _vel -> -> 3 `i `ui ]
+"60
+[; ;main.c: 60:                 }else{
+}
+[e $U 294  ]
+[e :U 293 ]
+{
+"61
+[; ;main.c: 61:                     vel = 0;
+[e = _vel -> -> 0 `i `ui ]
+"62
+[; ;main.c: 62:                 }
+}
+[e :U 294 ]
+"63
+[; ;main.c: 63:                 if(vel>0)alt = alt + vel;
+[e $ ! > _vel -> -> 0 `i `ui 295  ]
+[e = _alt + _alt _vel ]
+[e :U 295 ]
+"64
+[; ;main.c: 64:                 tempo = tempo + 1;
+[e = _tempo + _tempo -> -> 1 `i `ui ]
+"65
+[; ;main.c: 65:                 break;
+[e $U 278  ]
+"66
+[; ;main.c: 66:             case 'S':
+[e :U 296 ]
+"67
+[; ;main.c: 67:                 falha = 1;
+[e = _falha -> -> 1 `i `uc ]
+"68
+[; ;main.c: 68:                 tempo = tempo + 1;
+[e = _tempo + _tempo -> -> 1 `i `ui ]
+"69
+[; ;main.c: 69:                 if(vel>0)alt = alt + vel;
+[e $ ! > _vel -> -> 0 `i `ui 297  ]
+[e = _alt + _alt _vel ]
+[e :U 297 ]
+"70
+[; ;main.c: 70:                 break;
+[e $U 278  ]
+"71
+[; ;main.c: 71:             default:
+[e :U 298 ]
+"72
+[; ;main.c: 72:                 break;
+[e $U 278  ]
+"73
+[; ;main.c: 73:         }
+}
+[e $U 278  ]
+[e :U 279 ]
+[e [\ -> ( _kpReadKey ..  `i , $ -> -> 85 `ui `i 280
+ , $ -> -> 76 `ui `i 285
+ , $ -> -> 68 `ui `i 288
+ , $ -> -> 82 `ui `i 292
+ , $ -> -> 83 `ui `i 296
+ 298 ]
+[e :U 278 ]
+"74
+[; ;main.c: 74:         if(estado == 2){
+[e $ ! == -> _estado `i -> 2 `i 299  ]
+{
+"75
+[; ;main.c: 75:             alt=alt-10;
+[e = _alt - _alt -> -> 10 `i `ui ]
+"76
+[; ;main.c: 76:             if(vel<50){
+[e $ ! < _vel -> -> 50 `i `ui 300  ]
+{
+"77
+[; ;main.c: 77:                 alt=alt-40;
+[e = _alt - _alt -> -> 40 `i `ui ]
+"78
+[; ;main.c: 78:             }
+}
+[e :U 300 ]
+"79
+[; ;main.c: 79:         }
+}
+[e :U 299 ]
+"80
+[; ;main.c: 80:     }
+}
+[e :U 277 ]
+"81
+[; ;main.c: 81: }
+[e :UE 276 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"83
+[; ;main.c: 83: void main(void){
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"84
+[; ;main.c: 84:     int x = 0;
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+"85
+[; ;main.c: 85:     TRISD = 0x00;
+[e = _TRISD -> -> 0 `i `uc ]
+"86
+[; ;main.c: 86:     PORTD = 0x00;
+[e = _PORTD -> -> 0 `i `uc ]
+"88
+[; ;main.c: 88:     soInit();
+[e ( _soInit ..  ]
+"89
+[; ;main.c: 89:     kpInit();
+[e ( _kpInit ..  ]
+"90
+[; ;main.c: 90:     lcdInit();
+[e ( _lcdInit ..  ]
+"91
+[; ;main.c: 91:     ssdInit();
+[e ( _ssdInit ..  ]
+"92
+[; ;main.c: 92:     timerInit();
+[e ( _timerInit ..  ]
+"94
+[; ;main.c: 94:     lcdCommand(0x01);
+[e ( _lcdCommand (1 -> -> 1 `i `uc ]
+"95
+[; ;main.c: 95:     for(;;){
+{
+[e :U 302 ]
+{
+"96
+[; ;main.c: 96:         switch(estado){
+[e $U 306  ]
+{
+"97
+[; ;main.c: 97:             case 1:
+[e :U 307 ]
+"98
+[; ;main.c: 98:                 if(vel < 45){
+[e $ ! < _vel -> -> 45 `i `ui 308  ]
+{
+"99
+[; ;main.c: 99:                     falha = 1;
+[e = _falha -> -> 1 `i `uc ]
+"100
+[; ;main.c: 100:                 }
+}
+[e :U 308 ]
+"101
+[; ;main.c: 101:                 if(tempo >= 3){
+[e $ ! >= _tempo -> -> 3 `i `ui 309  ]
+{
+"102
+[; ;main.c: 102:                     estado = 2;
+[e = _estado -> -> 2 `i `uc ]
+"103
+[; ;main.c: 103:                 }
+}
+[e :U 309 ]
+"104
+[; ;main.c: 104:                 break;
+[e $U 305  ]
+"105
+[; ;main.c: 105:             case 2:
+[e :U 310 ]
+"106
+[; ;main.c: 106:                 if(alt < 30){
+[e $ ! < _alt -> -> 30 `i `ui 311  ]
+{
+"107
+[; ;main.c: 107:                     falha = 2;
+[e = _falha -> -> 2 `i `uc ]
+"108
+[; ;main.c: 108:                 }
+}
+[e :U 311 ]
+"109
+[; ;main.c: 109:                 break;
+[e $U 305  ]
+"110
+[; ;main.c: 110:             case 3:
+[e :U 312 ]
+"111
+[; ;main.c: 111:                 if((tempo > 5)&&(vel <= 5)&&(alt<1001)){
+[e $ ! && && > _tempo -> -> 5 `i `ui <= _vel -> -> 5 `i `ui < _alt -> -> 1001 `i `ui 313  ]
+{
+"112
+[; ;main.c: 112:                     estado = 4;
+[e = _estado -> -> 4 `i `uc ]
+"113
+[; ;main.c: 113:                 }else{
+}
+[e $U 314  ]
+[e :U 313 ]
+{
+"114
+[; ;main.c: 114:                     falha = 2;
+[e = _falha -> -> 2 `i `uc ]
+"115
+[; ;main.c: 115:                 }
+}
+[e :U 314 ]
+"116
+[; ;main.c: 116:                 break;
+[e $U 305  ]
+"117
+[; ;main.c: 117:         }
+}
+[e $U 305  ]
+[e :U 306 ]
+[e [\ -> _estado `i , $ -> 1 `i 307
+ , $ -> 2 `i 310
+ , $ -> 3 `i 312
+ 305 ]
+[e :U 305 ]
+"118
+[; ;main.c: 118:         switch(falha){
+[e $U 316  ]
+{
+"119
+[; ;main.c: 119:             case 0:
+[e :U 317 ]
+"120
+[; ;main.c: 120:                 PORTD = 0b00000010;
+[e = _PORTD -> -> 2 `i `uc ]
+"121
+[; ;main.c: 121:                 break;
+[e $U 315  ]
+"122
+[; ;main.c: 122:             case 1:
+[e :U 318 ]
+"123
+[; ;main.c: 123:                 PORTD = 0b00000011;
+[e = _PORTD -> -> 3 `i `uc ]
+"124
+[; ;main.c: 124:                 break;
+[e $U 315  ]
+"125
+[; ;main.c: 125:             case 2:
+[e :U 319 ]
+"126
+[; ;main.c: 126:                 PORTD = 0b00000001;
+[e = _PORTD -> -> 1 `i `uc ]
+"127
+[; ;main.c: 127:                 break;
+[e $U 315  ]
+"128
+[; ;main.c: 128:         }
+}
+[e $U 315  ]
+[e :U 316 ]
+[e [\ -> _falha `i , $ -> 0 `i 317
+ , $ -> 1 `i 318
+ , $ -> 2 `i 319
+ 315 ]
+[e :U 315 ]
+"129
+[; ;main.c: 129:         if(falha == 0){
+[e $ ! == -> _falha `i -> 0 `i 320  ]
+{
+"130
+[; ;main.c: 130:             LeTeclado();
+[e ( _LeTeclado ..  ]
+"131
+[; ;main.c: 131:             kpDebounce();
+[e ( _kpDebounce ..  ]
+"132
+[; ;main.c: 132:         }
+}
+[e :U 320 ]
+"133
+[; ;main.c: 133:         lcdCommand(0x80);
+[e ( _lcdCommand (1 -> -> 128 `i `uc ]
+"134
+[; ;main.c: 134:         lcdString("V:");
+[e ( _lcdString (1 :s 1C ]
+"135
+[; ;main.c: 135:         lcdNumber(vel);
+[e ( _lcdNumber (1 -> _vel `i ]
+"136
+[; ;main.c: 136:         lcdString(" T:");
+[e ( _lcdString (1 :s 2C ]
+"137
+[; ;main.c: 137:         lcdNumber(tempo);
+[e ( _lcdNumber (1 -> _tempo `i ]
+"139
+[; ;main.c: 139:         lcdCommand(0xC0);
+[e ( _lcdCommand (1 -> -> 192 `i `uc ]
+"140
+[; ;main.c: 140:         lcdString("H:");
+[e ( _lcdString (1 :s 3C ]
+"141
+[; ;main.c: 141:         lcdNumber(alt);
+[e ( _lcdNumber (1 -> _alt `i ]
+"143
+[; ;main.c: 143:         v0 = estado;
+[e = _v0 -> _estado `uc ]
+"144
+[; ;main.c: 144:         ssdDigit(x, 0);
+[e ( _ssdDigit (2 , -> _x `uc -> -> 0 `i `uc ]
+"145
+[; ;main.c: 145:         ssdDigit(x, 1);
+[e ( _ssdDigit (2 , -> _x `uc -> -> 1 `i `uc ]
+"146
+[; ;main.c: 146:         ssdDigit(x, 2);
+[e ( _ssdDigit (2 , -> _x `uc -> -> 2 `i `uc ]
+"147
+[; ;main.c: 147:         ssdDigit(v0, 3);
+[e ( _ssdDigit (2 , _v0 -> -> 3 `i `uc ]
+"148
+[; ;main.c: 148:         ssdUpdate();
+[e ( _ssdUpdate ..  ]
+"149
+[; ;main.c: 149:         atraso_ms(100);
+[e ( _atraso_ms (1 -> -> 100 `i `ui ]
+"150
+[; ;main.c: 150:     }
+}
+[e $U 302  ]
+[e :U 303 ]
+}
+"151
+[; ;main.c: 151: }
+[e :UE 301 ]
+}
+[a 1C 86 58 0 ]
+[a 2C 32 84 58 0 ]
+[a 3C 72 58 0 ]
