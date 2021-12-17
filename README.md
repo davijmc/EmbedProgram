@@ -22,7 +22,7 @@ com as teclas do teclado "1,2,3,4,5", representadas por "U,L,D,R,S" respectivame
  * Altitude menor do 30m após a queima do combustível principal e sem o paraquedas aberto;
  * O paraquedas abre enquanto ou não se passaram 5 segundos ou a velocidade é maior do que 5m/s ou a altitude é maior do que 1000m;
 
-O codigo só executa comandos se não houver falha!
-Para ganhar, deve conseguir alcançar o estagio 4 sem falhas!
+-O codigo só executa comandos se não houver falha!
+-Para ganhar, deve conseguir alcançar o estagio 4 sem falhas!
 
-Ressalvas: clock utilizado na placa = 40MHz, velocidade computada somente enquanto o foguete se afasta ou tenta se afastar do ponto de lançamento.
+-Ressalvas: clock utilizado na placa = 40MHz, velocidade computada somente enquanto o foguete se afasta ou tenta se afastar do ponto de lançamento.
