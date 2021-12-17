@@ -26,4 +26,4 @@ com as teclas do teclado "1,2,3,4,5", representadas por "U,L,D,R,S" respectivame
 
 -O codigo só executa comandos se não houver falha!
 -Para ganhar, deve conseguir alcançar o estagio 4 sem falhas!
--Ressalvas: clock utilizado na placa = 40MHz, velocidade computada somente enquanto o foguete se afasta ou tenta se afastar do ponto de lançamento.
+-Ressalvas: clock utilizado na placa = 8MHz, velocidade computada somente enquanto o foguete se afasta ou tenta se afastar do ponto de lançamento.
